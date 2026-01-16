@@ -1,0 +1,30 @@
+:root {
+  /*Cores*/
+  --cinza-medio: #33363f;
+  --fundo-geral: #06151a;
+  --grafite-fundo-componentes: #212121;
+  --branco-textos: #ffffff;
+  /*Primária*/
+  --verde-destaque: #17d9b1;
+  /*Gradiente*/
+  --gradiente-banner: linear-gradient(180deg, #17e4b9 0%, #091d24 100%);
+  /*Fontes*/
+  /*Body*/
+  --body-line-height: 120%;
+  --font-size-extra-large: 25px;
+  --font-size-large: 20px;
+  --font-size-medium: 16px;
+  --font-size-small: 13px;
+  --font-size-extra-small: 10px;
+  /*Headings*/
+  --headers-line-height: 125%;
+  --font-size-h1: 76px (4.75rem);
+  --font-size-h2: 61px (3.812rem);
+  --font-size-h3: 49px (3.062rem);
+  --font-size-h4: 39px (1.938rem);
+  --font-size-h5: 25px (1.562rem);
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
