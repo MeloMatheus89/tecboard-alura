@@ -1,3 +1,20 @@
-/* input {
-    background-color: ;
-} */
+input {
+  background-color: var(--cinza-medio);
+  border: var(--cinza-medio) 1px;
+  border-radius: 8px;
+  height: 35px;
+  width: 328px;
+  margin: 8px;
+  padding-left: 16px;
+  color: #7d7878;
+}
+
+input::placeholder {
+  padding: 8px 16px;
+}
+/*
+    TO DO: Fazer esse elemento ficar em destaque verde na cor designada
+*/
+input:active {
+  border: var(--verde-destaque) 12px;
+}
