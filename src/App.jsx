@@ -1,4 +1,5 @@
 import "./App.css";
+import { FormularioDeEvento } from "./componentes/FormularioDeEvento/index.jsx";
 
 function App() {
   return (

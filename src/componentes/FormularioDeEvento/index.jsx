@@ -1,3 +1,8 @@
+import { TituloFormulario } from "../TituloFormulario/index.jsx";
+import { CampoDeFormulario } from "../CampoDeFormulario/index.jsx";
+import { CampoDeEntrada } from "../CampoDeEntrada/index.jsx";
+import { Label } from "../Label/index.jsx";
+
 export function FormularioDeEvento() {
   return (
     <form className="form-evento">
