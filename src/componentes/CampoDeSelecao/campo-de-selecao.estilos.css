@@ -1,0 +1,10 @@
+.campo-de-selecao {
+  background-color: transparent;
+  border: 1px solid var(--cinza-medio);
+  border-radius: 8px;
+  height: 35px;
+  width: 328px;
+  margin: 8px;
+  padding-left: 16px;
+  color: var(--branco-textos);
+}
