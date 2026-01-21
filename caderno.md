@@ -56,3 +56,45 @@ Essa sintaxe permite que o componente seja espalhado dentro de tudo que for decl
 ```
 
 O Resultado é um campo de entrada com as propriedades chamadas ali. Isso é útil quando você precisa de criar os elementos da página acima, mas não precisa de absolutamente tudo (ou quando o elemento em si tiver uma quantidade de parâmetros inviável de declarar um por um o tempo todo [carece de fontes da minha parte])
+
+Também podemos escrever alguns _props_ usando a sintaxe abaixo no componente
+
+```
+function CelebrityCard(props) {
+  // Código a ser completado
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>Idade: {age}</p>
+      <p>Profissão: {profession}</p>
+    </div>
+  );
+}
+```
+
+É interessante nesse caso declarar o que são os atributos dos props para que o React interprete com maior facilidad e principalmente antes do `return ([código omitido])`.
+` const {name, age, profession} = props`
+
+Ao fazer isso ele cria um objeto com as características
+
+```
+    props = {
+        name: ;
+        age: ;
+        profession: ;
+    }
+```
+
+E aguarda a entrada dos dados na hora de chamar o componente lá no App.jsx.
+
+# Virtual DOM
+
+O React.js em prática ele só renderiza o que foi alterado após calcular as diferenças presentes nos componentes. Vide imagem:
+
+<!-- Colocar a imagem do exemplo do Vídeo do cap 3 video 2 -->
+
+![Imagem](./caderno-imagens/image.png)
+
+Na imagem acima representa o Virtual DOM na parte de cima e o que foi renderizado pelo navegador na parte de baixo.
+
+O Virtual DOM mantem uma representação dos ocorridos em memória e quando muda ele faz um cálculo do que será alterado e aí sim ele vai lá e envia para o navegador para apresentar as mudanças na tela.
