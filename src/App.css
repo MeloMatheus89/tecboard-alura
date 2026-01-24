@@ -9,9 +9,6 @@ header {
   justify-content: center;
 }
 section {
-  background: var(--gradiente-banner);
-  display: flex;
-  justify-content: center;
 }
 
 section img {

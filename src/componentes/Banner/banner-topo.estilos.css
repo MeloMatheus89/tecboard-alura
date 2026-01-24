@@ -1,0 +1,9 @@
+.banner-topo {
+  background: var(--gradiente-banner);
+  display: flex;
+  justify-content: center;
+}
+
+.banner-topo img {
+  max-width: 90%;
+}
