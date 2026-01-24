@@ -1,5 +1,6 @@
 import "./App.css";
 import { Banner } from "./componentes/Banner/index.jsx";
+import { CardEventos } from "./componentes/CardEventos/index.jsx";
 import { FormularioDeEvento } from "./componentes/FormularioDeEvento/index.jsx";
 import { Tema } from "./componentes/Tema/index.jsx";
 
@@ -31,6 +32,15 @@ function App() {
     },
   ];
 
+  const eventos = [
+    {
+      capa: "https://http.cat/images/100.jpg",
+      tema: temas[0],
+      data: new Date(),
+      titulo: "Mulheres no Front",
+    },
+  ];
+
   return (
     <>
       <main>
@@ -40,9 +50,14 @@ function App() {
         <Banner />
         <FormularioDeEvento />
       </main>
-      <section>
-        <Tema tema={temas[0]}></Tema>
-      </section>
+      {temas.map(function (item) {
+        return (
+          <section key={item.id}>
+            <Tema tema={item}></Tema>
+            <CardEventos evento={eventos[0]} />
+          </section>
+        );
+      })}
     </>
   );
 }

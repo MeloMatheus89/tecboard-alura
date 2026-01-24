@@ -1,0 +1,8 @@
+.tema {
+  font-family: var(--orbitron);
+  font-size: var(--font-size-h4);
+  font-weight: 600;
+  line-height: var(--headers-line-height);
+  color: var(--branco-textos);
+  text-transform: uppercase;
+}

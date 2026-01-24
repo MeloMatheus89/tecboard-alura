@@ -98,3 +98,15 @@ O React.js em prática ele só renderiza o que foi alterado após calcular as di
 Na imagem acima representa o Virtual DOM na parte de cima e o que foi renderizado pelo navegador na parte de baixo.
 
 O Virtual DOM mantem uma representação dos ocorridos em memória e quando muda ele faz um cálculo do que será alterado e aí sim ele vai lá e envia para o navegador para apresentar as mudanças na tela.
+
+## Seção relembrando JavaScript
+
+```
+  Array.map(function(itemDoArray){
+    [código omtido]
+  })
+```
+
+O método map corre todo o Array e ele consegue entregar um retorno dentro da sua função. Pense que ele pode chamar uma outra função (recursividade?) para trabalhar essa etapa dentro do código do React e por consequência renderizar um componente na tela.
+
+A vantagem de usar `.map()` é que ele obrigatoriamente retorna um resultado do processo que ele passou.

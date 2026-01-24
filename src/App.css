@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: var(--fundo-geral);
 }
 
 header {
@@ -8,9 +9,7 @@ header {
   display: flex;
   justify-content: center;
 }
-section {
-}
-
+/* 
 section img {
   max-width: 90%;
-}
+} */
