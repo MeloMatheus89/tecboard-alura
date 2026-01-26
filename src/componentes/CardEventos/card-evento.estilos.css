@@ -1,2 +1,46 @@
 .card-evento {
+  background: var(--grafite-fundo-componentes);
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+  color: var(--branco-textos);
+}
+
+.card-evento p,
+h4 {
+  margin: 0;
+}
+
+.card-evento .corpo {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.card-evento .tag {
+  background-color: var(--cinza-medio);
+  border-radius: 4px;
+  padding: 8px;
+
+  font-family: var(--orbitron);
+  font-weight: 700;
+  font-size: var(--font-size-extra-small);
+  line-height: var(--body-line-height);
+  letter-spacing: 10%;
+  text-transform: uppercase;
+}
+
+.card-evento .data {
+  font-weight: 400;
+  font-size: var(--font-size-small);
+  line-height: var(--body-line-height);
+  letter-spacing: 0;
+}
+
+.card-evento .titulo {
+  font-family: var(--orbitron);
+  font-weight: 700;
+  font-size: var(--font-size-extra-large);
 }
