@@ -1,10 +1,10 @@
 .campo-de-selecao {
-  background-color: transparent;
+  background-color: var(--grafite-fundo-componentes);
   border: 1px solid var(--cinza-medio);
   border-radius: 8px;
   height: 35px;
   width: 328px;
   margin: 8px;
   padding-left: 16px;
-  color: var(--branco-textos);
+  color: var(--cinza-medio);
 }

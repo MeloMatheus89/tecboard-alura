@@ -142,3 +142,7 @@ Alguns cuidados precisam ser tomados. Pense que o componente, a parte que é "HT
 
 Então onde colocamos o código JavaScript?? **Antes do `return ([elementos para serem renderizados])`.**
 Ao colocar ali. O navegador irá fazer a lógica necessária para executar essa tarefa, renderizar apenas o que mudou(se mudou) e entregar a resposta de forma dinâmica.
+
+## Ações do formulário
+
+Antes do React 19 existia um método de enviar os dados para serem processados em outro lugar.

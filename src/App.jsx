@@ -48,7 +48,7 @@ function App() {
           <img src="/logo.png" />
         </header>
         <Banner />
-        <FormularioDeEvento />
+        <FormularioDeEvento temas={temas} />
       </main>
       {temas.map(function (item) {
         return (
