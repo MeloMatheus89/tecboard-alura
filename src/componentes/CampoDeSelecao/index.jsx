@@ -17,5 +17,3 @@ export function CampoDeSelecao({ itens, ...rest }) {
     </select>
   );
 }
-
-// Usar um forEach??

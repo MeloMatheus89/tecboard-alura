@@ -9,11 +9,23 @@ import { Label } from "../Label/index.jsx";
 import { CampoDeSelecao } from "../CampoDeSelecao/index.jsx";
 import { Botao } from "../Botao/index.jsx";
 
-function aoFormSubmetido() {
-  console.log(`Está na hora de criar um novo evento, criançada!`);
-}
-
 export function FormularioDeEvento({ temas }) {
+  // Tratativa de enviar o formulário fica dentro da função que irá renderizar o formulário, porém antes do return ([coisas do formulario])
+  function aoFormSubmetido(formData) {
+    event.preventDefault();
+    console.log(`Está na hora de criar um novo evento, criançada! ${formData}`);
+    const evento = {
+      capa: formData.get("capa"),
+      tema: temas.find((item) => item.id == formData.get("temaEvento")),
+      data: new Date(formData.get("dataEvento")),
+      titulo: formData.get("nomeEvento"),
+    };
+    console.log(`Dados do evento ${evento}`);
+
+    /* Para servir de gabarito do evento
+  
+   */
+  }
   return (
     <form className="form-evento" action={aoFormSubmetido}>
       <TituloFormulario>Preencha para criar um evento:</TituloFormulario>
