@@ -20,7 +20,7 @@ export function FormularioDeEvento({ temas }) {
       data: new Date(formData.get("dataEvento")),
       titulo: formData.get("nomeEvento"),
     };
-    console.log(`Dados do evento ${evento}`);
+    console.log("Dados do evento: ", evento);
 
     /* Para servir de gabarito do evento
   
