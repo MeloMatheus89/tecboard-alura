@@ -146,3 +146,18 @@ Ao colocar ali. O navegador irá fazer a lógica necessária para executar essa 
 ## Ações do formulário
 
 Antes do React 19 existia um método de enviar os dados para serem processados em outro lugar.
+
+**Informações importantes**
+
+A tag `<form>` entrega um objeto JS pronto chamado formData. Podemos usar ele para ganhar tempo. Para buscar as informações do formData usaremos o `formData.get()`
+
+A sintaxe geral será `formData.get('name')` onde name é o name do campo em questão. Exemplo usado nesse repositório.
+
+```
+const evento = {
+      capa: formData.get("capa"),
+      tema: temas.find((item) => item.id == formData.get("temaEvento")),
+      data: new Date(formData.get("dataEvento")),
+      titulo: formData.get("nomeEvento"),
+    }
+```
