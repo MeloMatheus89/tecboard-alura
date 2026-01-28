@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Banner } from "./componentes/Banner/index.jsx";
 import { CardEventos } from "./componentes/CardEventos/index.jsx";
@@ -32,18 +33,28 @@ function App() {
     },
   ];
 
-  const eventos = [
+  // const eventos = [
+  //   {
+  //     capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
+  //     tema: temas[0],
+  //     data: new Date(),
+  //     titulo: "Mulheres no Front",
+  //   },
+  // ];
+
+  const [eventos, setEventos] = useState([
     {
       capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
       tema: temas[0],
       data: new Date(),
       titulo: "Mulheres no Front",
     },
-  ];
+  ]);
 
   function adicionarEvento(evento) {
-    eventos.push(evento);
-    console.log("eventos atualizados => ", eventos);
+    // eventos.push(evento);
+    // console.log("eventos atualizados => ", eventos);
+    setEventos([...eventos, evento]);
   }
 
   return (

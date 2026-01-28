@@ -6,5 +6,6 @@
   width: 328px;
   margin: 8px;
   padding-left: 16px;
-  color: var(--cinza-medio);
+  color: var(--branco-textos);
+  max-width: 90%;
 }

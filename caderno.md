@@ -163,3 +163,95 @@ const evento = {
       titulo: formData.get("nomeEvento"),
     }
 ```
+
+## Estados do componente
+
+O estado é uma forma de representar informações que podem mudar ao longo do tempo dentro de um componente. O nosso cenário aqui, temos o array de eventos. Ele poderá (e deverá), mudar conforme clicamos e preenchemos o formulário.
+
+Ao mudar a quantiade de elementos dentro de eventos, precisamos avisar ao REACT que ele deve atualizar a interface no que tange aquele array de eventos. De acordo com o Gemini, o React tem o comportamento de um estagiário bem preguiçoso, igual aos que eu já tive na Jabil. É necessário "cutucar" o infeliz para ele voltar a renderizar aquele trecho.
+
+Para criar um estado, usamos um **Hook**.
+
+### useState
+
+Como se usa o useState??
+
+Primeira coisa, a gente garante que ele vai ser chamado no react ao importar ele. `import { useState } from "react";` . Cola isso no topo do documento ou deixe a IDE completar para ganhar tempo. Esse ponto recebe o item de atenção da categoria **IPC**.
+
+Detro do App.jsx, ou de onde ele for usado, você chama o useState com uma sintaxe similar à abaixo.
+
+`const [estadoAtual, setEstadoAtual] = useState([valor inicial]);`
+
+Como a mágica acontece: Sempre que você quiser mudar o dado, você chama a função: `setEstadoAtual(novoValor)`. O React, então, percebe a mudança, joga o novoValor para dentro do estadoAtual e atualiza a tela para você. "
+
+# Trecho retirado da alura sobre como era feito antes do React19:
+
+O que muda com o React 19?
+Antes do React 19, você não podia passar uma função direto no action de um formulário. Isso era coisa do HTML tradicional. Mas com o novo compilador, o React permite que a gente use funções diretamente no action — e essa função vai receber os dados do formulário automaticamente, via `formData.get()`.
+
+Isso significa menos código, menos estado local e menos complicação.
+
+Mas e se o projeto for em React 18 (ou anterior)?
+Aí o cenário muda.
+
+Você vai encontrar formulários bem diferentes. Em vez de usar formData, os dados dos inputs são controlados pelo estado da aplicação. A gente chama isso de input controlado.
+
+O que é um input controlado?
+Antes de tudo, vale entender dois eventos importantes em formulários no React:
+
+`onSubmit`: é o que acontece quando o formulário é enviado. Normalmente a gente intercepta esse evento pra impedir que a página recarregue e processa os dados manualmente.
+`onChange`: é o que acontece sempre que o usuário digita ou muda algo em um campo. É esse evento que a gente usa pra atualizar o estado com o valor do input.
+É quando o valor do campo (input, textarea, etc.) está sempre ligado ao estado do componente. O usuário digita, e o useState registra o que tá sendo digitado. O valor do input é controlado 100% pelo React.
+
+Exemplo:
+
+```
+  function FormularioDeBusca() {
+    const [consulta, setConsulta] = useState("");
+
+  function aoSubmeter(evento) {
+  evento.preventDefault();
+  alert(`Você pesquisou por: ${consulta}`);
+}
+
+  return (
+    <form onSubmit={aoSubmeter}>
+    <input
+      value={consulta}
+      onChange={(e) => setConsulta(e.target.value)}
+    />
+    <button type="submit">Buscar</button>
+  </form>
+);
+}
+```
+
+### Por que isso ainda é importante?
+
+Porque a maior parte das aplicações por aí ainda usam versões anteriores do React. E mesmo que você esteja começando já no React 19, entender como a gente fazia antes é importante pra:
+
+### Manter ou evoluir projetos legados
+
+Conseguir ler código de outras pessoas
+Entender melhor como o React funciona por baixo dos panos
+E quando o formulário fica grande?
+Gerenciar muitos useState pode ficar bagunçado. É por isso que surgiram bibliotecas como:
+
+1. React Hook Form (RHF): leve, rápido, funciona bem com validações
+1. Formik: muito usado, ótimo pra formulários mais estruturados
+
+Essas libs ajudam a lidar com formulários longos, regras de validação, erro, envio, loading... Tudo isso com menos código e mais organização.
+
+### Conclusão
+
+Se você tá usando React 19, aproveita esse novo jeito com form action={minhaFuncao}. É simples, limpo e moderno.
+
+Mas também é importante entender como lidávamos com formulários antes: com useState, inputs controlados, onChange, onSubmit... E como as bibliotecas de formulários vieram pra ajudar.
+
+Aprender essas duas abordagens — a nova e a clássica — te deixa mais preparado pra lidar com qualquer projeto React por aí.
+
+Um passo de cada vez. Tá tudo se encaixando!
+
+```
+
+```
