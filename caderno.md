@@ -149,7 +149,9 @@ Antes do React 19 existia um método de enviar os dados para serem processados e
 
 **Informações importantes**
 
-A tag `<form>` entrega um objeto JS pronto chamado formData. Podemos usar ele para ganhar tempo. Para buscar as informações do formData usaremos o `formData.get()`
+A tag `<form>` entrega um objeto JS pronto chamado formData. Podemos usar ele para ganhar tempo.
+
+Para buscar as informações do formData usaremos o `formData.get()`
 
 A sintaxe geral será `formData.get('name')` onde name é o name do campo em questão. Exemplo usado nesse repositório.
 

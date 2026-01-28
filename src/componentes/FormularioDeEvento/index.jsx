@@ -9,7 +9,7 @@ import { Label } from "../Label/index.jsx";
 import { CampoDeSelecao } from "../CampoDeSelecao/index.jsx";
 import { Botao } from "../Botao/index.jsx";
 
-export function FormularioDeEvento({ temas }) {
+export function FormularioDeEvento({ temas, aoSubmeter }) {
   // Tratativa de enviar o formulário fica dentro da função que irá renderizar o formulário, porém antes do return ([coisas do formulario])
   function aoFormSubmetido(formData) {
     event.preventDefault();
@@ -20,9 +20,9 @@ export function FormularioDeEvento({ temas }) {
       data: new Date(formData.get("dataEvento")),
       titulo: formData.get("nomeEvento"),
     };
-    console.log("Dados do evento: ", evento);
-
+    aoSubmeter(evento);
     /* Para servir de gabarito do evento
+    console.log("Dados do evento: ", evento);
   
    */
   }
