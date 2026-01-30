@@ -256,4 +256,6 @@ Um passo de cada vez. Tá tudo se encaixando!
 
 ```
 
-# Fim do capítulo 4
+# Publicando o projeto
+
+Para rodar ele já fora dos formatos JSX e deixar apenas em JavaScript puro executamos no terminal o comando `npm run build`. Isso irá minimizar variáveis e deixar o código legível para navegadores, não para humanos. Isso aumenta a performance dos navegadores na hora de exibir os elementos HTML após serem tratados pelo JS.
