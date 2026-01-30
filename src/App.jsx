@@ -66,16 +66,33 @@ function App() {
         <Banner />
         <FormularioDeEvento temas={temas} aoSubmeter={adicionarEvento} />
       </main>
-      {temas.map(function (item) {
-        return (
-          <section key={item.id}>
-            <Tema tema={item}></Tema>
-            {eventos.map(function (item, index) {
-              return <CardEventos evento={item} key={index} />;
-            })}
-          </section>
-        );
-      })}
+      <section className="container">
+        {temas.map(function (tema) {
+          if (
+            // Se existir algum evento então... (precisamos de uma confirmação de verdadeiro ou falso nesse método)
+            !eventos.some(function (evento) {
+              // Retornamos verdadeiro ou falso se o tema do evento bate com algum tema da lista (estamos padronizando o ID dos dois lados, por isso é possível)
+              return evento.tema.id == tema.id;
+            })
+          ) {
+            return null;
+          }
+          return (
+            <section key={tema.id}>
+              <Tema tema={tema} />
+              <div className="eventos">
+                {eventos
+                  .filter(function (evento) {
+                    return evento.tema.id == tema.id;
+                  })
+                  .map(function (evento, index) {
+                    return <CardEventos evento={evento} key={index} />;
+                  })}
+              </div>
+            </section>
+          );
+        })}
+      </section>
     </>
   );
 }
